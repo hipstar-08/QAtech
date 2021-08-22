@@ -3,3 +3,4 @@
 /geckodriver.log
 /tests/geckodriver.log
 /test.py
+**.cpython-39.pyc
