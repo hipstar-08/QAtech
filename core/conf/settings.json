@@ -1,0 +1,5 @@
+{
+  "ui_url" : "https://todomvc.com/examples/react/#/",
+  "browser" : "chrome",
+  "api_url" : "https://jsonplaceholder.typicode.com/"
+}
