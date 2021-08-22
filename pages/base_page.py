@@ -14,12 +14,14 @@ class BasePage:
         elif str(configs['browser']).lower() == "opera":
             self.driver = webdriver.Opera()
         self.driver.get(configs['ui_url'])
-        # self.timeout = 10
+        self.driver.maximize_window()
         time.sleep(3)
-
 
     def get_driver(self):
         return self.driver
+
+    # def maximize_browser(self):
+    #     return self.driver.maximize_window()
 
     def get_title(self):
         return self.driver.title
