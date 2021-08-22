@@ -8,13 +8,15 @@ from selenium.webdriver.common.keys import Keys
 
 class TodoPage(BasePage):
 
+    # def load_website(self):
+    #     BasePage.__init__()
+
     def __init__(self):
         self.locator = ToDoPageLocators
         super(TodoPage, self).__init__()
 
     def find_element_search(self):
         self.driver.find_element(by=self.locator.CSS, value=self.locator.SEARCH_BAR)
-        # return web_element
 
     def add_todos_elements(self, todo_text="abc"):
         web_element = self.driver.find_element(by=self.locator.CSS, value=self.locator.SEARCH_BAR)
@@ -72,11 +74,12 @@ class TodoPage(BasePage):
         web_element = self.driver.find_element(by=self.locator.CSS, value=self.locator.SELECT_COMPLETED)
         return web_element
 
-    def find_element_completed_when_active_present(self):
+    def show_completed_when_active_todo_present(self):
         try:
             self.driver.find_element(by=self.locator.CSS, value=self.locator.CHECKBOX_LIST)
         except NoSuchElementException:
             return False
 
     def find_element_clear_completed(self):
-        self.driver.find_element(by=self.locator.XPATH, value=self.locator.CLEAR_COMPLETED)
+        web_element = self.driver.find_element(by=self.locator.XPATH, value=self.locator.CLEAR_COMPLETED)
+        return web_element
