@@ -3,4 +3,7 @@
 /geckodriver.log
 /tests/geckodriver.log
 /test.py
-*.cpython-39.pyc
+**/*.pyc
+**/__pycache__/
+**/.pycache__/
+**/target/
