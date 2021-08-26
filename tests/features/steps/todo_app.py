@@ -58,11 +58,3 @@ class TestTodoPage(TodoPage):
     @when(u'Delete the todo item from list')
     def delete_added_completed_todo(self):
         TodoPage.find_element_clear_completed(self.driver).click()
-
-
-# def add_double_element(self, todo_text='test'):
-#     TodoPage.add_todos_elements(self, 'test1')
-#     TodoPage.enter_todo_list(self)
-#     TodoPage.add_todos_elements(self, 'test2')
-#     TodoPage.enter_todo_list(self)
-#     assert todo_text == TodoPage.find_element_todo_text(self).text
