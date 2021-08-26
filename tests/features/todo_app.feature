@@ -1,6 +1,4 @@
 Feature: To Do App testing with smoke and regression
-
-
   Background:
     Given Load the browser
 

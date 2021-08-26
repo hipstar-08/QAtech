@@ -1,6 +1,4 @@
 Feature: API testing
-
-
 Background:
   Given Base endpoint
 
